@@ -5,13 +5,13 @@ author: Jonathan Gilligan
 date: '2021-03-29'
 fontsize: 12pt
 output: 
-  github_document:
-    toc: yes
-  html_document:
-    toc: yes
   pdf_document: 
     includes:
       in_header: ees3310.sty
+    toc: yes
+  html_document:
+    toc: yes
+  github_document:
     toc: yes
 ---
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}
@@ -66,7 +66,7 @@ if (!dir.exists(data_dir)) dir.create(data_dir)
 
 source(file.path(script_dir, "utils.R"), chdir = T)
 
-due_date_1 <- lubridate::date("2021-04-12")
+due_date_1 <- lubridate::date("2021-04-14")
 
 long_due_date_1 <- stamp("Monday, March 1")(due_date_1)
 short_due_date_1 <- stamp("Mar. 1")(due_date_1)
