@@ -1,0 +1,43 @@
+---
+title: 'put the title of your project here'
+author: "put your name here"
+date: "Due April 13"
+bibliography: "decarbonization.bib" # this line tells RMarkdown which file to use for the bibliography
+fontsize: 12pt
+output: 
+  word_document:
+    toc: yes
+  pdf_document: 
+    includes:
+      in_header: ees3310.sty
+    toc: yes
+  github_document:
+    toc: yes
+  html_document:
+    toc: yes
+---
+```{r setup, include=FALSE}
+knitr::knit_hooks$set(inline = function(x) { knitr:::format_sci(x, 'md')})
+knitr::opts_chunk$set(echo = TRUE)
+
+# This section loads necessary R libraries and sources scripts that define 
+# useful functions format_md.
+# 
+data_dir = "_data"
+script_dir = "_scripts"
+
+if (!dir.exists(data_dir)) dir.create(data_dir)
+
+library(pacman)
+
+# Load all of the following packages.
+# Install any missing packages.
+p_load(scales, tidyverse, kayadata)
+
+# This sets the default style for ggplot
+theme_set(theme_bw(base_size = 15))
+
+# Load basic utility scripts
+source(file.path(script_dir, 'utils.R'), chdir = T)
+source(file.path(script_dir, 'format_md.R'), chdir = T)
+```

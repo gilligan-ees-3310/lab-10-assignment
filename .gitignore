@@ -1,0 +1,32 @@
+# Directories
+.Rproj.user/
+
+# Patterns
+
+## Output files from R CMD build
+/*.tar.gz
+
+## Output files from R CMD check
+/*.Rcheck/
+
+## Knitr caches
+*cache/
+
+## RStudio files
+*.Rproj
+*.aux
+*.bak
+*.bbl
+*.blg
+*.ilg
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+
+# Individual files
+.Rapp.history
+.Rhistory
+.RData
+.Ruserdata
